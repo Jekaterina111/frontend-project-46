@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "type":"module",
+  "type": "module",
   "description": "[![Actions Status](https://github.com/Jekaterina111/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/Jekaterina111/frontend-project-46/actions)",
   "bin": {
     "gendiff": "bin/gendiff.js"
@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/Jekaterina111/frontend-project-46#readme",
   "dependencies": {
-    "commander": "^10.0.1"
+    "commander": "^10.0.1",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "eslint": "^8.23.1",
