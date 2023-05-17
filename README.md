@@ -7,4 +7,10 @@
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/599a23ea584b13d86edf/test_coverage)](https://codeclimate.com/github/Jekaterina111/frontend-project-46/test_coverage)
 
+#Flat File Comparison (JSON)
+
 [![asciicast](https://asciinema.org/a/3uyzS07fdl52XwqPdhm2eTLUm.svg)](https://asciinema.org/a/3uyzS07fdl52XwqPdhm2eTLUm)
+
+#Flat file comparison (yaml)
+
+[![asciicast](https://asciinema.org/a/Unrkj7okZePq6W1kERQgyAJnv.svg)](https://asciinema.org/a/Unrkj7okZePq6W1kERQgyAJnv)
