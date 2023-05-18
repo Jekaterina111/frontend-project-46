@@ -10,7 +10,7 @@ const __dirname = dirname(__filename);
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
 const readFixture = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8');
 
-const stylishResult = readFixture('jsonResult.txt');
+const stylishResult = readFixture('stylishResult.txt');
 
 test('genDiff', () => {
   const filepath1 = getFixturePath('file1.json');
