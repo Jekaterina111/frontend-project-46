@@ -3,17 +3,17 @@ import _ from 'lodash';
 const getIndent = (depth, str = ' ', identCount = 4) => str.repeat((depth * identCount) - 2);
 
 const stringify = (value, depth = 1) => {
-if (!_.isPlainObject(value)) {
+  if (!_.isPlainObject(value)) {
     return `${value}`;
-}
-const lines = Object
-  .entries(value)
-  .map(([key, val]) => `${getIndent(depth + 1)} ${key}: ${stringify(val, depth + 1)}`);
-    return [
+  }
+  const lines = Object
+    .entries(value)
+    .map(([key, val]) => `${getIndent(depth + 1)} ${key}: ${stringify(val, depth + 1)}`);
+  return [
     '{',
     ...lines,
     `${getIndent(depth)}}`,
-    ].join('\n');
+  ].join('\n');
 };
 
 const stylish = (data) => {
@@ -22,7 +22,7 @@ const stylish = (data) => {
       switch (item.type) {
         case 'nested': {
           return `${getIndent(depth)}  ${item.key}: {\n${iter(item.children, depth + 1)}\n ${getIndent(depth)} }`;
-      }
+        }
         case 'deleted': {
           return `${getIndent(depth)}- ${item.key}: ${stringify(item.value, depth)}`;
         }
@@ -40,10 +40,9 @@ const stylish = (data) => {
         }
       }
     });
-   return result.join('\n');
+    return result.join('\n');
+  };
+  return `{\n${iter(data)}\n}`;
 };
-return `{\n${iter(data)}\n}`;
-}
 
-  export default stylish;
-  
+export default stylish;
