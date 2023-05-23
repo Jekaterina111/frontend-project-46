@@ -4,10 +4,18 @@ on:
   - push
   - pull_request
 
+env:
+  CI: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
+    strategy:
+      # Node versions list
+      matrix:
+        node-version: [18.x]
+        
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v1
